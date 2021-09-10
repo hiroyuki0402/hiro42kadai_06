@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     private func questionNumberSetUp() {
         questionNumber = Int.random(in: 1...100)
         updateLabel()
-        slider.value = 50.0
+        slider.value = slider.maximumValue / 2
     }
     private func updateLabel() {
         questionLabel.text = String(questionNumber)
