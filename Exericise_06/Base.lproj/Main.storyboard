@@ -29,12 +29,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="R2V-Vp-OXh"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ixx-1m-80v"/>
-                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vW-Mk-Z9W">
-                                <rect key="frame" x="31" y="218" width="8" height="21"/>
+                                <rect key="frame" x="19" y="218" width="8" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="hhJ-3G-p3t"/>
                                 </constraints>
@@ -51,11 +48,13 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDJ-O5-aug">
-                                <rect key="frame" x="171" y="306" width="73" height="30"/>
-                                <state key="normal" title="判定"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDJ-O5-aug">
+                                <rect key="frame" x="191.5" y="433" width="31" height="30"/>
+                                <state key="normal" title="判定">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="judgementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gEC-Ja-gek"/>
+                                    <action selector="judgementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="439-O6-6tC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,21 +64,21 @@
                             <constraint firstItem="0vW-Mk-Z9W" firstAttribute="top" secondItem="aiu-fT-AzC" secondAttribute="bottom" constant="8" id="0co-5h-2Pg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gG4-ju-tZq" secondAttribute="trailing" constant="97" id="3t2-pp-PSp"/>
                             <constraint firstItem="gG4-ju-tZq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="4Ac-hN-oZx"/>
-                            <constraint firstItem="oDJ-O5-aug" firstAttribute="top" secondItem="aiu-fT-AzC" secondAttribute="bottom" constant="96" id="7jA-7X-28y"/>
-                            <constraint firstItem="0vW-Mk-Z9W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="Ixy-LJ-OQd"/>
+                            <constraint firstItem="oDJ-O5-aug" firstAttribute="top" secondItem="aiu-fT-AzC" secondAttribute="bottom" constant="223" id="Bz8-aU-rcB"/>
+                            <constraint firstItem="0vW-Mk-Z9W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="Ixy-LJ-OQd"/>
                             <constraint firstItem="gG4-ju-tZq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="PX5-oD-aJH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oDJ-O5-aug" secondAttribute="trailing" constant="170" id="TbB-VB-2AD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aiu-fT-AzC" secondAttribute="trailing" constant="20" id="WDk-2n-QZd"/>
-                            <constraint firstItem="oDJ-O5-aug" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="171" id="Z1D-wV-2OU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ffj-KY-rO2" secondAttribute="trailing" constant="14" id="g1y-HR-zOj"/>
                             <constraint firstItem="aiu-fT-AzC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="l0b-m8-KVD"/>
+                            <constraint firstItem="ffj-KY-rO2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0vW-Mk-Z9W" secondAttribute="trailing" constant="8" symbolic="YES" id="rZS-56-Els"/>
+                            <constraint firstItem="oDJ-O5-aug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sfM-Bx-mpD"/>
                             <constraint firstItem="aiu-fT-AzC" firstAttribute="top" secondItem="gG4-ju-tZq" secondAttribute="bottom" constant="52" id="tbo-d1-niu"/>
                             <constraint firstItem="ffj-KY-rO2" firstAttribute="top" secondItem="aiu-fT-AzC" secondAttribute="bottom" constant="8" id="xD8-Od-lOt"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="numberLabel" destination="gG4-ju-tZq" id="HS5-M5-93a"/>
-                        <outlet property="sliderObj" destination="aiu-fT-AzC" id="4mJ-Jy-aCd"/>
+                        <outlet property="questionLabel" destination="gG4-ju-tZq" id="HS5-M5-93a"/>
+                        <outlet property="slider" destination="aiu-fT-AzC" id="4mJ-Jy-aCd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
