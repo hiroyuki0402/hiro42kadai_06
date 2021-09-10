@@ -27,8 +27,8 @@ class ViewController: UIViewController {
     private func alert(alertMessage: String) {
         let alert = UIAlertController(title: "結果", message: alertMessage, preferredStyle: .alert)
 
-        let okAtion = UIAlertAction(title: "再挑戦", style: .default) { _ in
-            self.questionNumberSetUp()
+        let okAtion = UIAlertAction(title: "再挑戦", style: .default) { [weak self] _ in
+            self?.questionNumberSetUp()
         }
         alert.addAction(okAtion)
         present(alert, animated: true, completion: nil)
@@ -44,8 +44,7 @@ class ViewController: UIViewController {
     }
 
     private func questionNumberSetUp() {
-        let randomNumber = Int.random(in: 1...100)
-        questionNumber = randomNumber
+        questionNumber = Int.random(in: 1...100)
         updateLabel()
         slider.value = 50.0
     }
