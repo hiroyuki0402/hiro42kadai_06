@@ -10,12 +10,12 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet private var questionLabel: UILabel!
     @IBOutlet private var slider: UISlider!
-    private var sliderNum = 0
     private var questionNumber = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionNumberSetUp()
+        slider.value = slider.maximumValue / 2
+        resetGame()
     }
 
     // MARK: METHOds
@@ -28,14 +28,14 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "結果", message: alertMessage, preferredStyle: .alert)
 
         let okAtion = UIAlertAction(title: "再挑戦", style: .default) { [weak self] _ in
-            self?.questionNumberSetUp()
+            self?.resetGame()
         }
         alert.addAction(okAtion)
         present(alert, animated: true, completion: nil)
     }
 
     private func judgment() {
-        self.sliderNum = Int(slider.value)
+        let sliderNum = Int(slider.value)
         if sliderNum == questionNumber {
             alert(alertMessage: "アタリ!\nあなたの値\(sliderNum)")
         } else {
@@ -43,11 +43,11 @@ class ViewController: UIViewController {
         }
     }
 
-    private func questionNumberSetUp() {
+    private func resetGame() {
         questionNumber = Int.random(in: 1...100)
         updateLabel()
-        slider.value = slider.maximumValue / 2
     }
+
     private func updateLabel() {
         questionLabel.text = String(questionNumber)
     }
